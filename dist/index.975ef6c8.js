@@ -1011,22 +1011,28 @@ function App() {
     _s();
     const theme = _react.useState("green");
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        style: {
+            background: "url(http://pets-images.dev-apis.com/pets/wallpaperB.jpg)"
+        },
+        className: "p-0 m-0",
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_themeContextDefault.default.Provider, {
             value: theme,
             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.BrowserRouter, {
                 children: [
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("header", {
+                        className: "w-full mb-10 text-center p-7 bg-gradient-to-b from-purple-400 via-pink-500 to-red-500",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
                             to: "/",
+                            className: "text-6xl text-white hover:text-gray-200",
                             children: "Adopt me"
                         }, void 0, false, {
                             fileName: "src/index.js",
-                            lineNumber: 16,
+                            lineNumber: 21,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "src/index.js",
-                        lineNumber: 15,
+                        lineNumber: 20,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
@@ -1036,7 +1042,7 @@ function App() {
                                 path: "/"
                             }, void 0, false, {
                                 fileName: "src/index.js",
-                                lineNumber: 20,
+                                lineNumber: 27,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -1044,24 +1050,24 @@ function App() {
                                 path: "details/:id"
                             }, void 0, false, {
                                 fileName: "src/index.js",
-                                lineNumber: 21,
+                                lineNumber: 28,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/index.js",
-                        lineNumber: 19,
+                        lineNumber: 26,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/index.js",
-                lineNumber: 14,
+                lineNumber: 19,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "src/index.js",
-            lineNumber: 13,
+            lineNumber: 18,
             columnNumber: 7
         }, this)
     }, void 0, false, {
@@ -1075,12 +1081,12 @@ _c = App;
 _reactDomDefault.default.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_react.StrictMode, {
     children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(App, {}, void 0, false, {
         fileName: "src/index.js",
-        lineNumber: 31,
+        lineNumber: 38,
         columnNumber: 5
     }, undefined)
 }, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 30,
+    lineNumber: 37,
     columnNumber: 3
 }, undefined), document.getElementById("root"));
 var _c;
@@ -24648,12 +24654,14 @@ const SearchParams = ()=>{
                         htmlFor: "breed",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("select", {
                             id: "breed",
+                            className: "disabled: opacity-50",
+                            disabled: !breeds.lenght,
                             onChange: (e)=>setBreed(e.target.value)
                             ,
                             children: [
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {}, void 0, false, {
                                     fileName: "src/SearchParams.js",
-                                    lineNumber: 61,
+                                    lineNumber: 66,
                                     columnNumber: 13
                                 }, undefined),
                                 breeds.map((breed)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
@@ -24661,7 +24669,7 @@ const SearchParams = ()=>{
                                         children: breed
                                     }, breed, false, {
                                         fileName: "src/SearchParams.js",
-                                        lineNumber: 63,
+                                        lineNumber: 68,
                                         columnNumber: 15
                                     }, undefined)
                                 )
@@ -24685,7 +24693,7 @@ const SearchParams = ()=>{
                             children: [
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {}, void 0, false, {
                                     fileName: "src/SearchParams.js",
-                                    lineNumber: 71,
+                                    lineNumber: 76,
                                     columnNumber: 13
                                 }, undefined),
                                 Colors.map((color)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV("option", {
@@ -24693,19 +24701,19 @@ const SearchParams = ()=>{
                                         children: color
                                     }, color, false, {
                                         fileName: "src/SearchParams.js",
-                                        lineNumber: 73,
+                                        lineNumber: 78,
                                         columnNumber: 15
                                     }, undefined)
                                 )
                             ]
                         }, void 0, true, {
                             fileName: "src/SearchParams.js",
-                            lineNumber: 70,
+                            lineNumber: 75,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/SearchParams.js",
-                        lineNumber: 69,
+                        lineNumber: 74,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
@@ -24716,7 +24724,7 @@ const SearchParams = ()=>{
                         children: "submit"
                     }, void 0, false, {
                         fileName: "src/SearchParams.js",
-                        lineNumber: 79,
+                        lineNumber: 84,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -24729,7 +24737,7 @@ const SearchParams = ()=>{
                 pets: pets
             }, void 0, false, {
                 fileName: "src/SearchParams.js",
-                lineNumber: 83,
+                lineNumber: 88,
                 columnNumber: 7
             }, undefined)
         ]
@@ -24768,7 +24776,7 @@ var _pet = require("./Pet");
 var _petDefault = parcelHelpers.interopDefault(_pet);
 const Results = ({ pets  })=>{
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        className: "search",
+        className: " grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
         children: pets?.map((pet)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_petDefault.default, {
                 name: pet.name,
                 breed: pet.breed,
@@ -24812,11 +24820,11 @@ var _reactRouterDom = require("react-router-dom");
 const Pet = ({ name , animal , breed , images , location , id  })=>{
     let imageSrc = images?.[0] || "http://pets-images.dev-apis.com/pets/none.jpg";
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-        className: "pet",
+        className: "relative block",
         to: `/details/${id}`,
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                className: "image-container",
+                className: "",
                 children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
                     alt: name,
                     src: imageSrc
@@ -24831,7 +24839,7 @@ const Pet = ({ name , animal , breed , images , location , id  })=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                className: "info",
+                className: " badge",
                 children: [
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
                         children: name
@@ -25139,7 +25147,7 @@ class Details extends _reactDefault.default.Component {
                     children: name
                 }, void 0, false, {
                     fileName: "src/Details.js",
-                    lineNumber: 55,
+                    lineNumber: 56,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
@@ -25154,7 +25162,7 @@ class Details extends _reactDefault.default.Component {
                     ]
                 }, void 0, true, {
                     fileName: "src/Details.js",
-                    lineNumber: 56,
+                    lineNumber: 57,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_themeContextDefault.default.Consumer, {
@@ -25169,19 +25177,19 @@ class Details extends _reactDefault.default.Component {
                             ]
                         }, void 0, true, {
                             fileName: "src/Details.js",
-                            lineNumber: 61,
+                            lineNumber: 62,
                             columnNumber: 13
                         }, this)
                 }, void 0, false, {
                     fileName: "src/Details.js",
-                    lineNumber: 59,
+                    lineNumber: 60,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_carouselDefault.default, {
                     images: images
                 }, void 0, false, {
                     fileName: "src/Details.js",
-                    lineNumber: 69,
+                    lineNumber: 70,
                     columnNumber: 9
                 }, this),
                 this.state.showModal ? /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_modalDefault.default, {
@@ -25195,7 +25203,7 @@ class Details extends _reactDefault.default.Component {
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Details.js",
-                                lineNumber: 73,
+                                lineNumber: 74,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -25209,7 +25217,7 @@ class Details extends _reactDefault.default.Component {
                                         children: "yes"
                                     }, void 0, false, {
                                         fileName: "src/Details.js",
-                                        lineNumber: 75,
+                                        lineNumber: 76,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
@@ -25217,30 +25225,30 @@ class Details extends _reactDefault.default.Component {
                                         children: "No"
                                     }, void 0, false, {
                                         fileName: "src/Details.js",
-                                        lineNumber: 81,
+                                        lineNumber: 82,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Details.js",
-                                lineNumber: 74,
+                                lineNumber: 75,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/Details.js",
-                        lineNumber: 72,
+                        lineNumber: 73,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "src/Details.js",
-                    lineNumber: 71,
+                    lineNumber: 72,
                     columnNumber: 11
                 }, this) : null
             ]
         }, void 0, true, {
             fileName: "src/Details.js",
-            lineNumber: 54,
+            lineNumber: 55,
             columnNumber: 7
         }, this);
     }
@@ -25253,12 +25261,12 @@ function withErrorBoundary(props) {
             ...props
         }, void 0, false, {
             fileName: "src/Details.js",
-            lineNumber: 94,
+            lineNumber: 96,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/Details.js",
-        lineNumber: 93,
+        lineNumber: 95,
         columnNumber: 5
     }, this);
 }
@@ -25271,7 +25279,50 @@ $RefreshReg$(_c, "DetailWithErrorBoundary");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","./Carousel":"1lXBA","./ErrorBoundary":"dNDjy","./ThemeContext":"4b9qW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Modal":"FKuaN"}],"1lXBA":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Modal":"FKuaN","react-router-dom":"fdOAw","./Carousel":"1lXBA","./ErrorBoundary":"dNDjy","./ThemeContext":"4b9qW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"FKuaN":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7f78 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7f78.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactDom = require("react-dom");
+var _s = $RefreshSig$();
+const modal = document.getElementById("modal");
+const Modal = ({ children  })=>{
+    _s();
+    const elRef = _react.useRef(null);
+    if (!elRef.current) elRef.current = document.createElement("div");
+    _react.useEffect(()=>{
+        modal.appendChild(elRef.current);
+        return ()=>modal.removeChild(elRef.current)
+        ;
+    });
+    return /*#__PURE__*/ _reactDom.createPortal(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        children: children
+    }, void 0, false, {
+        fileName: "src/Modal.js",
+        lineNumber: 17,
+        columnNumber: 23
+    }, undefined), elRef.current);
+};
+_s(Modal, "uS4DrwVCzH44ayWi2jMWCV+OL1E=");
+_c = Modal;
+exports.default = Modal;
+var _c;
+$RefreshReg$(_c, "Modal");
+
+  $parcel$ReactRefreshHelpers$7f78.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1lXBA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9e23 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -25408,49 +25459,6 @@ exports.default = ErrorBoundary;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"FKuaN":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7f78 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7f78.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactDom = require("react-dom");
-var _s = $RefreshSig$();
-const modal = document.getElementById("modal");
-const Modal = ({ children  })=>{
-    _s();
-    const elRef = _react.useRef(null);
-    if (!elRef.current) elRef.current = document.createElement("div");
-    _react.useEffect(()=>{
-        modal.appendChild(elRef.current);
-        return ()=>modal.removeChild(elRef.current)
-        ;
-    });
-    return /*#__PURE__*/ _reactDom.createPortal(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        children: children
-    }, void 0, false, {
-        fileName: "src/Modal.js",
-        lineNumber: 17,
-        columnNumber: 23
-    }, undefined), elRef.current);
-};
-_s(Modal, "uS4DrwVCzH44ayWi2jMWCV+OL1E=");
-_c = Modal;
-exports.default = Modal;
-var _c;
-$RefreshReg$(_c, "Modal");
-
-  $parcel$ReactRefreshHelpers$7f78.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["kn9T2","7nZVA","8lqZg"], "8lqZg", "parcelRequireaddb")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["kn9T2","7nZVA","8lqZg"], "8lqZg", "parcelRequireaddb")
 
 //# sourceMappingURL=index.975ef6c8.js.map

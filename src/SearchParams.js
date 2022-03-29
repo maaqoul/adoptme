@@ -57,7 +57,12 @@ const SearchParams = () => {
           </select>
         </label>
         <label htmlFor="breed">
-          <select id="breed" onChange={(e) => setBreed(e.target.value)}>
+          <select
+            id="breed"
+            className="disabled: opacity-50"
+            disabled={!breeds.lenght}
+            onChange={(e) => setBreed(e.target.value)}
+          >
             <option />
             {breeds.map((breed) => (
               <option key={breed} value={breed}>
