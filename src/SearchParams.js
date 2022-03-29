@@ -1,15 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Results from "./Results";
+import ThemeContext from "./ThemeContext";
 import useBreed from "./useBreed";
 
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
+const Colors = ["red", "blue", "pink", "gray", "white"];
 
 const SearchParams = () => {
   const [location, setLocation] = useState("Seatle, WA");
   const [selectedAnimal, setSelectedAnimal] = useState("");
   const [breed, setBreed] = useState([]);
-  const [breeds, status] = useBreed(selectedAnimal);
+  const [breeds] = useBreed(selectedAnimal);
   const [pets, setPets] = useState([]);
+  const [theme, setTheme] = useContext(ThemeContext);
 
   useEffect(() => {
     fetchPets();
@@ -17,7 +20,7 @@ const SearchParams = () => {
 
   async function fetchPets() {
     const response = await fetch(
-      `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`
+      `http://pets-v2.dev-apis.com/pets?animal=${selectedAnimal}&location=${location}&breed=${breed}`
     );
     const json = await response.json();
     setPets(json.pets);
@@ -53,7 +56,7 @@ const SearchParams = () => {
             ))}
           </select>
         </label>
-        <label htmlFor="animal">
+        <label htmlFor="breed">
           <select id="breed" onChange={(e) => setBreed(e.target.value)}>
             <option />
             {breeds.map((breed) => (
@@ -63,9 +66,20 @@ const SearchParams = () => {
             ))}
           </select>
         </label>
-        <button>submit</button>
+        <label htmlFor="color">
+          <select id="Color" onChange={(e) => setTheme(e.target.value)}>
+            <option />
+            {Colors.map((color) => (
+              <option key={color} value={color}>
+                {color}
+              </option>
+            ))}
+          </select>
+        </label>
+        <button style={{ backgroundColor: theme }} type="submit">
+          submit
+        </button>
       </form>
-      <strong>{status}</strong>
       <Results pets={pets} />
     </div>
   );
